@@ -1,15 +1,12 @@
-﻿using Paragigms;
-
-// inheritance 
-var animal = new Animal("Bear");
-animal.Eat();
+﻿using InheritanceTypes;
 
 var dog = new Dog("Rex");
-dog.Eat();
+// Eat() is invoking from the base class
+dog.Eat(); // Rex: eating
 
-// polymorphism
-dog.Run();
+// Sleep() is invoking from the derived class  
+dog.Sleep(); // Rex: Zzz...
 
-// composition
 var cat = new Cat("Kitty");
-cat.Ancestor.Eat();
+// Eat() is overridden in the derived class
+cat.Eat(); // I'm not hungry!
