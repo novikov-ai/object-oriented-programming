@@ -31,7 +31,7 @@ namespace Paragigms
         {
         }
 
-        // We overided the Run method with our own implementation
+        // Override the Run method with our own implementation
         public override void Run()
         {
             Console.WriteLine($"{_name}: Zzz...");

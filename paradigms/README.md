@@ -16,6 +16,7 @@ using Paragigms;
 // inheritance 
 var animal = new Animal("Bear");
 animal.Eat(); // Bear: eating
+animal.Run(); // Bear: running!
 
 var dog = new Dog("Rex");
 dog.Eat(); // Rex: eating
@@ -26,4 +27,5 @@ dog.Run(); // Rex: Zzz...
 // composition
 var cat = new Cat("Kitty");
 cat.Ancestor.Eat(); // Kitty: eating
+cat.Ancestor.Run(); // Kitty: running!
 ~~~
