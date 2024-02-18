@@ -9,21 +9,21 @@
 ### Composition
 [Cat has an composed property Ancestor](Basics.cs#L44)
 
-Try in Main: 
+Let's Run in Main: 
 ~~~C#
 using Paragigms;
 
 // inheritance 
 var animal = new Animal("Bear");
-animal.Eat();
+animal.Eat(); // Bear: eating
 
 var dog = new Dog("Rex");
-dog.Eat();
+dog.Eat(); // Rex: eating
 
 // polymorphism
-dog.Run();
+dog.Run(); // Rex: Zzz...
 
 // composition
 var cat = new Cat("Kitty");
-cat.Ancestor.Eat();
+cat.Ancestor.Eat(); // Kitty: eating
 ~~~
