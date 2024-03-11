@@ -1,8 +1,18 @@
-﻿using DynamicCohesion;
+﻿using CovarianceContravariance;
 
-var vehicle = new Vehicle();
-vehicle.Run(15); // Out: The vehicle drove about 15 yesterday
+// covariance
+IEnumerable<Base> example;
 
-var moto = new Moto();
-moto.Run(15); // Out: The MOTO drove about 15 yesterday
-moto.Run("Dune"); // Out: The vehicle drove to Dune yesterday
+example = new List<Base>();
+example = new List<Derived>();
+
+
+// contravariance
+Doer.Make(Base.Magic); // out: Magic is happening here: base hello
+Doer.Make(Derived.Magic); // out: Magic is happening here: base hello
+
+// contravariance in arrays
+string[] arr = new string[5];
+object[] arrObj = new object[5];
+
+arrObj = arr;
