@@ -1,18 +1,10 @@
-﻿using CovarianceContravariance;
+﻿using GeneralHierarchy.OpenClosedPrinciple;
 
-// covariance
-IEnumerable<Base> example;
+var general = new General();
+general.Do();
 
-example = new List<Base>();
-example = new List<Derived>();
+var derived = new Derived();
+derived.Do();
 
-
-// contravariance
-Doer.Make(Base.Magic); // out: Magic is happening here: base hello
-Doer.Make(Derived.Magic); // out: Magic is happening here: base hello
-
-// contravariance in arrays
-string[] arr = new string[5];
-object[] arrObj = new object[5];
-
-arrObj = arr;
+var cantOverride = new CantOverride();
+cantOverride.Do();
