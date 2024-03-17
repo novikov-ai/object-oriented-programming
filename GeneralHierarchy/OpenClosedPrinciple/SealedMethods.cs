@@ -12,7 +12,7 @@ namespace GeneralHierarchy.OpenClosedPrinciple
     {
         public sealed override void Do()
         {
-            System.Console.WriteLine("Invokation from DerivedSealed");
+            System.Console.WriteLine("Invokation from Derived");
         }
     }
 
@@ -28,5 +28,10 @@ namespace GeneralHierarchy.OpenClosedPrinciple
         {
             System.Console.WriteLine("Invokation from CantOverride");
         }
+    }
+
+    public class DerivedFromCantOverride: CantOverride
+    {
+        
     }
 }
