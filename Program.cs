@@ -1,21 +1,15 @@
-﻿using GeneralHierarchy.OpenClosedPrinciple;
+﻿using GeneralHierarchy.NoneClosure;
 
-var general = new General();
-general.Do(); // Invokation from General
+IDog dog = new Dog();
+dog.Bark();
 
-var derived = new Derived();
-derived.Do(); // Invokation from Derived
+ICat cat = new Cat();
+cat.Purr();
 
-var cantOverride = new CantOverride();
-cantOverride.Do(); // Invokation from CantOverride
+var none = new None();
 
-// ! UNEXPECTED BEHAVIOUR !
+dog = none;
+dog.Bark();
 
-General dd = new Derived();
-dd.Do(); // Invokation from Derived
-
-General ddd = new CantOverride();
-ddd.Do(); // Invokation from Derived
-
-General dddd = new DerivedFromCantOverride();
-dddd.Do(); // Invokation from Derived
+cat = none;
+cat.Purr();
