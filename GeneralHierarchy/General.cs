@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Text.Json;
+using GeneralHierarchy.NoneClosure;
 
 namespace GeneralHierarchy
 {
@@ -8,6 +9,17 @@ namespace GeneralHierarchy
     /// </summary>
     public class General
     {
+        public static void AssignmentAttempt(ref General target, General source)
+        {
+            if (target.GetType() == source.GetType())
+            {
+                target = source;
+                return;
+            }
+
+            target = new None();
+        }
+
         public static void Copy(object source, object destination)
         {
             PropertyInfo[] srcProps = source.GetType().GetProperties();

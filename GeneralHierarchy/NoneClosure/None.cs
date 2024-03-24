@@ -1,6 +1,6 @@
 namespace GeneralHierarchy.NoneClosure
 {
-    public sealed class None : IDog, ICat
+    public sealed class None : Any, IDog, ICat
     {
         public void Bark() { }
 
