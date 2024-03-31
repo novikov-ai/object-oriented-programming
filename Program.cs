@@ -1,12 +1,11 @@
-﻿using MethodHidingPolicy;
+﻿using GeneralHierarchy.Generics;
 
-var a = new A();
-var b = new B();
+var v1 = new Vector<Double>(5, 2, 3);
+var v2 = new Vector<Double>(5.123, 123, 6.112);
 
-// метод публичен в родительском классе А и публичен в его потомке B;
-a.PublicDo();
-b.PublicDo();
+Console.WriteLine(Enumerable.Sum(v1 + v2)); // 144.23499999999999
 
-// метод скрыт в родительском классе А и скрыт в его потомке B.
-// a.PrivateDo();
-// b.PrivateDo();
+var v3 = new Vector<int>(5, 2, 3);
+var v4 = new Vector<int>(6, 11, 1000);
+
+Console.WriteLine(Enumerable.Sum(v3 + v4)); // 1027
