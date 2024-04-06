@@ -1,7 +1,12 @@
-﻿using TaxonomyConflict;
+﻿using MethodsInvokation;
 
-var vehicleManual = new Vehicle(new TransmissionManual());
-vehicleManual.ShiftGear();
+// Covariance: 
+Dummy dummy = new DerivedDummy();
+dummy.Do(); // DerivedDummy does
 
-var vehicleAuto = new Vehicle(new TransmissionAuto());
-vehicleAuto.ShiftGear();
+// dummy.SomethingNew(); // can't invoke that
+
+// Polymorphism:
+DerivedDummy derivedDummy = new DerivedDummy();
+derivedDummy.Make("hello"); // Dummy made: hello
+derivedDummy.Make(123); // DerivedDummy made: 123
