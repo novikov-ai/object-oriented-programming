@@ -29,7 +29,7 @@ public class RestrictedArea : Shape
         return SizeA * SizeB * _offset;
     }
 
-        public void Display(int value)
+    public void Display(int value)
     {
         System.Console.WriteLine($"{value}");
     }
